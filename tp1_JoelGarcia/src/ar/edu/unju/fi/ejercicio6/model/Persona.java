@@ -1,22 +1,31 @@
 package ar.edu.unju.fi.ejercicio6.model;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Persona {
 
 	private int dni;
-	private String nobre;
+	private String nombre;
 	private LocalDate fechaNacimiento;
 	private String provincia;
 	
 	public Persona() {
-		System.out.println("Se creo el objeto persona.");
+		
 	}
 
 	public Persona(int dni, String nobre, LocalDate fechaNacimiento, String provincia) {
 		super();
 		this.dni = dni;
-		this.nobre = nobre;
+		this.nombre = nobre;
+		this.fechaNacimiento = fechaNacimiento;
+		this.provincia = provincia;
+	}
+	
+	public Persona(int dni, String nobre, LocalDate fechaNacimiento) {
+		super();
+		this.dni = dni;
+		this.nombre = nobre;
 		this.fechaNacimiento = fechaNacimiento;
 		this.provincia = "Jujuy";
 	}
@@ -30,11 +39,11 @@ public class Persona {
 	}
 
 	public String getNobre() {
-		return nobre;
+		return nombre;
 	}
 
 	public void setNobre(String nobre) {
-		this.nobre = nobre;
+		this.nombre = nobre;
 	}
 
 	public LocalDate getFechaNacimiento() {
@@ -54,13 +63,26 @@ public class Persona {
 	}
 	
 	public int calcularEdad() {
-		
-		
+		LocalDate fechaActual = LocalDate.now();
+		return Period.between(this.fechaNacimiento, fechaActual).getYears();
 	}
 	
 	public boolean esMayor() {
-		return calcularEdad >= 18;
+		return this.calcularEdad()>=18;
 	}
 	
-	
+	public void mostrarDatos() {
+		
+		System.out.println("DNI: " + dni);
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Fecha de nacimiento: " + fechaNacimiento);
+        System.out.println("Provincia: " + provincia);
+        System.out.print("Edad: " + calcularEdad() + " años. ");
+        if (esMayor()) {
+        	System.out.println("Es mayor de edad.");
+        }else {
+        	System.out.println("No es mayor de edad.");
+        }
+		
+	}
 }
