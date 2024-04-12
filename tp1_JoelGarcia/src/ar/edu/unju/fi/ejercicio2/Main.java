@@ -3,6 +3,7 @@ package ar.edu.unju.fi.ejercicio2;
 public class Main {
 
 	public static void main(String[] args) {
+		// Declaración e inicialización de variables
 		String nombrePais = "Argentina";
         int edadPersona = 22;
         double alturaEdificio = 150.5; 
@@ -10,6 +11,7 @@ public class Main {
         String numeroTelefono = "123456789";
         double coseno = Math.cos(0.5); // 
   
+        // Mostrar información en la consola
         System.out.println("Nombre del país: " + nombrePais);
         System.out.println("Edad de la persona: " + edadPersona + " años");
         System.out.println("Altura del edificio: " + alturaEdificio + " metros");

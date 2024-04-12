@@ -11,6 +11,7 @@ public class Pizza {
 	final double INGREDIENTES_ESPECIALES_30 = 750.00d;
 	final double INGREDIENTES_ESPECIALES_40 = 1000.00d;
 	
+	//Constructor por defecto de la clase Pizza
 	public Pizza() {
 		super();
 		// TODO Auto-generated constructor stub

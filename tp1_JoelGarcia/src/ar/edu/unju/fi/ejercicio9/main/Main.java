@@ -8,10 +8,13 @@ public class Main {
 
 	public static void main(String[] args) {
 
+		// Crear un objeto Scanner para leer la entrada del usuario desde la consola
 		Scanner sc = new Scanner(System.in);
 		
+	    // Bucle para solicitar los datos de tres productos		
 		for( int i=1 ; i<=3 ; i++) {
 			
+			// Solicitar al usuario que ingrese los datos para el producto
 			System.out.println("Ingrese los datos para el producto " + i + ":");
             System.out.print("Nombre: ");
             String nombre = sc.nextLine();

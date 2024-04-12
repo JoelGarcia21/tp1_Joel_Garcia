@@ -13,7 +13,7 @@ public class Main {
         System.out.println("Ingrese un numero entero:");
         int numero = sc.nextInt(); // lee el numero ingresado
         
-        
+        // Comprueba si el número es par o impar
         if (numero % 2 == 0) {
             int triple = numero * 3;
             System.out.println("El numero es par. El triple del numero es: " + triple);
